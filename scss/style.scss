@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700|Roboto:400,700&display=swap');
+
+// Variables
+$main-font-family: 'Roboto', sans-serif;
+$second-font-family: 'Merriweather', serif;
+$primary-background-color: #303030;
+$secondary-background-color: #1d1d1d;;
+$primary-red-color: #d32f2f;
+$light-red-color: #e06c6c;
+$primary-lightgray-color: #cfcfcf;
+$primary-white-color: #ffffff;
+$primary-black-color: #000000;
+
+// Reset
+*,
+*::before,
+*::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html{
+   font-family: $main-font-family;
+   color: $primary-black-color;
+   font-size: 62.5%;
+   scroll-behavior: smooth;
+   scroll-padding-top: 70px;
+}
+
+// Reusable classes
+.btn{
+   cursor: pointer;
+   border: none;
+   background: none;
+   text-align: center;
+   transition: all .3s ease-out;
+   color: $primary-black-color;
+   padding: 1rem 1.5rem;
+   font-size: 1.8rem;
+
+   &:focus{
+      outline: none;
+   }
+}
+
+.link{
+   color: inherit;
+   text-decoration: none;
+   cursor: pointer;
+}
+
+.content{
+   width: 100%;
+   font-size: 1.8rem;
+   padding: 2rem 0;
+   text-align: center;
+   background-color: darken($color: $primary-white-color, $amount: 5%);
+}
+
+.section-title{
+   width: 200px;
+   padding: 1rem;
+   font-size: 2.4rem;
+   text-transform: uppercase;
+   text-align: center;
+   letter-spacing: 1px;
+   color: $primary-white-color;
+   background-color: $primary-red-color;
+   text-shadow: 1px 1px $primary-black-color;
+
+   &--left{
+      margin: 1.5rem auto 1.5rem 0;
+      border-radius: 0 .25rem 1rem 0;
+   }
+
+   &--right{
+      margin: 1.5rem 0 1.5rem auto;
+      border-radius: .25rem 0 0 1rem;
+   }
+}
+
+.bold-text{
+   font-weight: 700;
+}
+
+.between-section{
+   width: 100%;
+   min-height: 40vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   &__header{
+      padding: 1rem;
+      font-size: 2rem;
+      font-family: $second-font-family;
+      font-style: italic;
+      text-align: center;
+      letter-spacing: 1px;
+      color: $primary-white-color;
+   }
+
+   &--shenzhen1{
+      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+         url("/assets/shenzhen-boat.jpg") center no-repeat;
+      background-size: cover;
+   }
+
+   &--shenzhen2{
+      background-color: black;
+   }
+}
+
+// Styles
+.navigation{
+   width: 100%;
+   height: 70px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   background-color: $secondary-background-color;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .27);
+
+   &__logo{
+      margin-left: 1rem;
+
+      &-text{
+         text-transform: uppercase;
+         text-shadow: 2px 2px black;
+         letter-spacing: 2px;
+
+         &--big{
+            font-size: 2.6rem;
+            color: $primary-white-color;
+            border-bottom: 3px solid $primary-red-color;
+            border-radius: .25rem;
+         }
+
+         &--small{
+            margin-top: .5rem;
+            font-size: 1.2rem;
+            color: darken($color: $primary-white-color, $amount: 20%);
+         }
+      }
+   }
+
+   &__hamburger{
+      width: 40px;
+      height: 24px;
+      margin-right: 1.5rem;
+      position: relative;
+      top: 0;
+      right: 0;
+      z-index: 2;
+   }
+
+   .hamburger{
+      overflow: visible;
+      transition-timing-function: linear;
+      transition-duration: .15s;
+      transition-property: opacity,filter;
+      color: inherit;
+      background-color: transparent;
+      transition: all .3s ease-in-out;
+
+      &:hover{
+         opacity: .80;
+      }
+
+      &__bar{
+         content: "";
+         width: 100%;
+         height: 4px;
+         background-color: $primary-white-color;
+         position: absolute;
+         top: 0;
+         left: 0;
+         margin: auto;
+         border-radius: .2rem;
+         transition: background-color 0s linear .13s;
+
+         &::before,
+         &::after{
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: $primary-white-color;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: auto;
+            border-radius: .2rem;
+         }
+
+         &::before{
+            width: 70%;
+            top: 10px;
+            transition: top .1s cubic-bezier(.33333,.66667,.66667,1) .2s,transform .13s cubic-bezier(.55,.055,.675,.19);
+         }
+
+         &::after{
+            width: 85%;
+            top: 20px;
+            transition: top .2s cubic-bezier(.33333,.66667,.66667,1) .2s,transform .13s cubic-bezier(.55,.055,.675,.19);
+         }
+      }
+
+      &-active{
+         transition-delay: .22s;
+         background-color: transparent;
+
+         &::after{
+            width: 100%;
+            top: 0;
+            transition: top .2s cubic-bezier(.33333,0,.66667,.33333),transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+            transform: translate3d(0,10px,0) rotate(-45deg);
+         }
+
+         &::before{
+            width: 100%;
+            top: 0;
+            transition: top .1s cubic-bezier(.33333,0,.66667,.33333) .15s,transform .13s cubic-bezier(.215,.61,.355,1) .22s;
+            transform: translate3d(0,10px,0) rotate(45deg);
+         }
+      }
+   }
+
+   &__menu{
+      width: 100%;
+      padding: 0;
+      position: fixed;
+      top: 70px;
+      left: 0;
+   }
+
+   .main-menu{
+      height: auto;
+      padding: 1rem;
+      overflow: hidden;
+      background-color: $secondary-background-color;
+      box-shadow: 0 5px 5px 0 rgba(0, 0, 0, .27);
+      list-style-type: none;
+      transform-origin: top;
+      transform: scaleY(0);
+      opacity: 0;
+      transition: all .3s ease-out;
+
+      &-active{
+         opacity: 1;
+         transform: scaleY(1);
+      }
+
+      &__item{
+         margin: 2rem 1rem;
+
+         .main-menu__link{
+            color: $primary-white-color;
+            font-size: 1.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: color .3s ease-out;
+
+            &:hover{
+               color: darken($color: $primary-white-color, $amount: 20%);
+            }
+         }
+      }
+   }
+
+}
+
+.header{
+   min-height: calc(100vh - 70px);
+   margin-top: 70px;
+   background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
+   url("/assets/shenzhen-city.jpg") center no-repeat;
+   background-size: cover;
+   display: flex;
+   align-items: center;
+
+   &__welcome{
+      width: 100%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .header__title{
+         padding: 0 2rem;
+         margin: 1rem 0;
+         text-align: center;
+         letter-spacing: 2px;
+         color: $primary-white-color;
+
+         &--big{
+            font-size: 3.2rem;
+            text-transform: uppercase;
+            text-shadow: 2px 2px $primary-black-color;
+         }
+
+         &--small{
+            font-size: 2.4rem;
+            font-style: italic;
+            font-family: $second-font-family;
+            text-shadow: 1px 1px $primary-black-color;
+         }
+      }
+
+      .header__link{
+         display: block;
+         margin: 2rem 0 1rem 0;
+
+         .header__button{
+            padding: 1rem 1.5rem;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            border-radius: .25rem;
+            background-color: $primary-red-color;
+            box-shadow: 0 0 5px 0 $primary-black-color;
+
+            &:hover{
+               background-color: darken($color: $primary-red-color, $amount: 5%);
+               transform: translateY(.5rem);
+            }
+         }
+      }
+   }
+}
+
+.about-us{
+   &__description{
+      margin: 0 1rem;
+      padding: .5rem;
+      line-height: 1.75;
+   }
+
+   &__link{
+      display: block;
+      margin: 1.5rem auto;
+
+      .about-us__button{
+         padding: 1rem;
+         font-size: 1.8rem;
+         text-transform: uppercase;
+         border-bottom: 2px solid $primary-red-color;
+         border-radius: .4rem;
+
+         &:hover{
+            background-color: $primary-red-color;
+            color: $primary-white-color;
+         }
+      }
+   }
+}
+
+.informations{
+   &__description{
+      margin: 0 1rem;
+      padding: .5rem;
+      line-height: 1.75;
+
+      &--left-side{
+         text-align: left;
+      }
+   }
+
+   &__menu{
+      margin: 0 1rem 1rem 1rem;
+   }
+
+   .info-menu{
+      font-size: 1.6rem;
+      text-align: left;
+      list-style-position: inside;
+      font-family: $second-font-family;
+
+      &__item{
+         margin: 0 0 .5rem 1rem;
+      }
+   }
+}
+
+.services{
+   display: flex;
+   flex-direction: column;
+
+   .service{
+      width: 90%;
+      margin: 2rem auto;
+
+      &__title{
+         font-size: 2rem;
+         margin: 1rem 0;
+         text-transform: uppercase;
+      }
+
+      &__subtitle{
+         font-size: 1.6rem;
+         padding: 1rem;
+         background-color: $primary-red-color;
+         border-radius: .25rem;
+         color: $primary-white-color;
+      }
+
+      &__text{
+         padding: 1rem;
+         font-size: 1.6rem;
+         line-height: 1.45;
+         text-align: justify;
+         font-family: $second-font-family;
+      }
+
+      &__list{
+         margin: 0 1rem 1rem 1rem;
+      }
+
+      .services-list{
+         font-size: 1.6rem;
+         text-align: left;
+         list-style-position: inside;
+         font-family: $second-font-family;
+
+         &__item{
+            margin: 0 0 1rem 1rem;
+         }
+      }
+   }
+}
