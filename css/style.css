@@ -13,7 +13,7 @@ html {
   color: #000000;
   font-size: 62.5%;
   scroll-behavior: smooth;
-  scroll-padding-top: 70px;
+  scroll-padding-top: 80px;
 }
 
 .btn {
@@ -68,6 +68,18 @@ html {
   border-radius: .25rem 0 0 1rem;
 }
 
+.section-list {
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  text-align: left;
+  list-style-position: inside;
+  font-family: "Merriweather", serif;
+}
+
+.section-list__item {
+  margin: .5rem 0 1rem 1rem;
+}
+
 .bold-text {
   font-weight: 700;
 }
@@ -92,23 +104,28 @@ html {
   font-family: "Merriweather", serif;
   font-style: italic;
   text-align: center;
-  letter-spacing: 1px;
   color: #ffffff;
 }
 
 .between-section--shenzhen1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/shenzhen-boat.jpg") center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/shenzhen-boat.jpg") center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/assets/shenzhen-city.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/shenzhen-city.jpg") center no-repeat;
   background-size: cover;
 }
 
 .between-section--shenzhen2 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/assets/shenzhen-boat.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/shenzhen-boat.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.between-section--shenzhen3 {
   background-color: black;
 }
 
 .navigation {
   width: 100%;
-  height: 70px;
+  height: 80px;
   position: fixed;
   top: 0;
   left: 0;
@@ -134,19 +151,20 @@ html {
 .navigation__logo-text {
   text-transform: uppercase;
   text-shadow: 2px 2px black;
-  letter-spacing: 2px;
 }
 
 .navigation__logo-text--big {
-  font-size: 2.6rem;
+  font-size: 2.8rem;
+  letter-spacing: 2px;
   color: #ffffff;
   border-bottom: 3px solid #d32f2f;
   border-radius: .25rem;
 }
 
 .navigation__logo-text--small {
-  margin-top: .5rem;
-  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  margin-top: .25rem;
   color: #cccccc;
 }
 
@@ -177,7 +195,7 @@ html {
 }
 
 .navigation .hamburger:hover {
-  opacity: .80;
+  opacity: .75;
 }
 
 .navigation .hamburger__bar {
@@ -297,14 +315,14 @@ html {
 }
 
 .navigation .main-menu__item .main-menu__link:hover {
-  color: #cccccc;
+  color: #bfbfbf;
 }
 
 .header {
-  min-height: calc(100vh - 70px);
-  margin-top: 70px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("../assets/shenzhen-city.jpg") center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../assets/shenzhen-city.jpg") center no-repeat;
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("/assets/shenzhen-city2.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/shenzhen-city2.jpg") center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -336,18 +354,19 @@ html {
   padding: 0 2rem;
   margin: 1rem 0;
   text-align: center;
-  letter-spacing: 2px;
   color: #ffffff;
 }
 
 .header__welcome .header__title--big {
   font-size: 3.2rem;
+  letter-spacing: 2px;
   text-transform: uppercase;
   text-shadow: 2px 2px #000000;
 }
 
 .header__welcome .header__title--small {
   font-size: 2.4rem;
+  letter-spacing: 1px;
   font-style: italic;
   font-family: "Merriweather", serif;
   text-shadow: 1px 1px #000000;
@@ -382,7 +401,7 @@ html {
 
 .about-us__link {
   display: block;
-  margin: 1.5rem auto;
+  margin: 2rem auto;
 }
 
 .about-us__link .about-us__button {
@@ -408,21 +427,6 @@ html {
   text-align: left;
 }
 
-.informations__menu {
-  margin: 0 1rem 1rem 1rem;
-}
-
-.informations .info-menu {
-  font-size: 1.6rem;
-  text-align: left;
-  list-style-position: inside;
-  font-family: "Merriweather", serif;
-}
-
-.informations .info-menu__item {
-  margin: 0 0 .5rem 1rem;
-}
-
 .services {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -435,7 +439,7 @@ html {
 
 .services .service {
   width: 90%;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 
 .services .service__title {
@@ -447,31 +451,72 @@ html {
 .services .service__subtitle {
   font-size: 1.6rem;
   padding: 1rem;
+  margin-bottom: 1rem;
+  font-family: "Merriweather", serif;
+  color: #ffffff;
   background-color: #d32f2f;
   border-radius: .25rem;
-  color: #ffffff;
 }
 
-.services .service__text {
-  padding: 1rem;
-  font-size: 1.6rem;
-  line-height: 1.45;
+.services .service__description {
+  padding: .5rem;
+  font-size: 1.8rem;
+  line-height: 1.35;
   text-align: justify;
-  font-family: "Merriweather", serif;
 }
 
-.services .service__list {
-  margin: 0 1rem 1rem 1rem;
+.services .service-list {
+  margin: 0;
 }
 
-.services .service .services-list {
-  font-size: 1.6rem;
+.advantages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.advantages .advantage {
+  width: 90%;
+  margin: 1.5rem auto;
+}
+
+.advantages .advantage__title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.advantages .advantage__description {
+  font-size: 1.8rem;
+  line-height: 1.35;
+}
+
+.experience__title {
+  margin: 2rem 1rem 0 1rem;
+  font-size: 1.8rem;
   text-align: left;
-  list-style-position: inside;
-  font-family: "Merriweather", serif;
+  text-align-last: center;
+  text-transform: uppercase;
 }
 
-.services .service .services-list__item {
-  margin: 0 0 1rem 1rem;
+.experience__description {
+  margin: 1rem 2rem;
+  line-height: 1.35;
+  text-align: justify;
+}
+
+.experience__horizontal-line {
+  width: 90%;
+  margin: .5rem auto;
+  border: 2px solid #d32f2f;
+  border-radius: 2px;
+}
+
+.experience-list {
+  margin: 0 1rem;
 }
 /*# sourceMappingURL=style.css.map */

@@ -6,7 +6,6 @@ $second-font-family: 'Merriweather', serif;
 $primary-background-color: #303030;
 $secondary-background-color: #1d1d1d;;
 $primary-red-color: #d32f2f;
-$light-red-color: #e06c6c;
 $primary-lightgray-color: #cfcfcf;
 $primary-white-color: #ffffff;
 $primary-black-color: #000000;
@@ -25,7 +24,7 @@ html{
    color: $primary-black-color;
    font-size: 62.5%;
    scroll-behavior: smooth;
-   scroll-padding-top: 70px;
+   scroll-padding-top: 80px;
 }
 
 // Reusable classes
@@ -80,6 +79,18 @@ html{
    }
 }
 
+.section-list{
+   margin-left: 1rem;
+   font-size: 1.6rem;
+   text-align: left;
+   list-style-position: inside;
+   font-family: $second-font-family;
+
+   &__item{
+      margin: .5rem 0 1rem 1rem;
+   }
+}
+
 .bold-text{
    font-weight: 700;
 }
@@ -97,17 +108,22 @@ html{
       font-family: $second-font-family;
       font-style: italic;
       text-align: center;
-      letter-spacing: 1px;
       color: $primary-white-color;
    }
 
    &--shenzhen1{
       background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
-         url("../assets/shenzhen-boat.jpg") center no-repeat;
+         url("/assets/shenzhen-city.jpg") center no-repeat;
       background-size: cover;
    }
 
    &--shenzhen2{
+      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+         url("/assets/shenzhen-boat.jpg") center no-repeat;
+      background-size: cover;
+   }
+
+   &--shenzhen3{
       background-color: black;
    }
 }
@@ -115,7 +131,7 @@ html{
 // Styles
 .navigation{
    width: 100%;
-   height: 70px;
+   height: 80px;
    position: fixed;
    top: 0;
    left: 0;
@@ -132,18 +148,19 @@ html{
       &-text{
          text-transform: uppercase;
          text-shadow: 2px 2px black;
-         letter-spacing: 2px;
 
          &--big{
-            font-size: 2.6rem;
+            font-size: 2.8rem;
+            letter-spacing: 2px;
             color: $primary-white-color;
             border-bottom: 3px solid $primary-red-color;
             border-radius: .25rem;
          }
 
          &--small{
-            margin-top: .5rem;
-            font-size: 1.2rem;
+            letter-spacing: 1px;
+            font-size: 1.4rem;
+            margin-top: .25rem;
             color: darken($color: $primary-white-color, $amount: 20%);
          }
       }
@@ -169,7 +186,7 @@ html{
       transition: all .3s ease-in-out;
 
       &:hover{
-         opacity: .80;
+         opacity: .75;
       }
 
       &__bar{
@@ -266,7 +283,7 @@ html{
             transition: color .3s ease-out;
 
             &:hover{
-               color: darken($color: $primary-white-color, $amount: 20%);
+               color: darken($color: $primary-white-color, $amount: 25%);
             }
          }
       }
@@ -275,10 +292,10 @@ html{
 }
 
 .header{
-   min-height: calc(100vh - 70px);
-   margin-top: 70px;
-   background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
-   url("../assets/shenzhen-city.jpg") center no-repeat;
+   min-height: calc(100vh - 80px);
+   margin-top: 80px;
+   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+   url("/assets/shenzhen-city2.jpg") center no-repeat;
    background-size: cover;
    display: flex;
    align-items: center;
@@ -295,17 +312,18 @@ html{
          padding: 0 2rem;
          margin: 1rem 0;
          text-align: center;
-         letter-spacing: 2px;
          color: $primary-white-color;
 
          &--big{
             font-size: 3.2rem;
+            letter-spacing: 2px;
             text-transform: uppercase;
             text-shadow: 2px 2px $primary-black-color;
          }
 
          &--small{
             font-size: 2.4rem;
+            letter-spacing: 1px;
             font-style: italic;
             font-family: $second-font-family;
             text-shadow: 1px 1px $primary-black-color;
@@ -342,7 +360,7 @@ html{
 
    &__link{
       display: block;
-      margin: 1.5rem auto;
+      margin: 2rem auto;
 
       .about-us__button{
          padding: 1rem;
@@ -369,21 +387,6 @@ html{
          text-align: left;
       }
    }
-
-   &__menu{
-      margin: 0 1rem 1rem 1rem;
-   }
-
-   .info-menu{
-      font-size: 1.6rem;
-      text-align: left;
-      list-style-position: inside;
-      font-family: $second-font-family;
-
-      &__item{
-         margin: 0 0 .5rem 1rem;
-      }
-   }
 }
 
 .services{
@@ -392,7 +395,7 @@ html{
 
    .service{
       width: 90%;
-      margin: 2rem auto;
+      margin: 1.5rem auto;
 
       &__title{
          font-size: 2rem;
@@ -403,32 +406,75 @@ html{
       &__subtitle{
          font-size: 1.6rem;
          padding: 1rem;
+         margin-bottom: 1rem;
+         font-family: $second-font-family;
+         color: $primary-white-color;
          background-color: $primary-red-color;
          border-radius: .25rem;
-         color: $primary-white-color;
       }
 
-      &__text{
-         padding: 1rem;
-         font-size: 1.6rem;
-         line-height: 1.45;
+      &__description{
+         padding: .5rem;
+         font-size: 1.8rem;
+         line-height: 1.35;
          text-align: justify;
-         font-family: $second-font-family;
       }
 
-      &__list{
-         margin: 0 1rem 1rem 1rem;
-      }
-
-      .services-list{
-         font-size: 1.6rem;
-         text-align: left;
-         list-style-position: inside;
-         font-family: $second-font-family;
-
-         &__item{
-            margin: 0 0 1rem 1rem;
-         }
+      &-list{
+         margin: 0;
       }
    }
+}
+
+.advantages{
+   display: flex;
+   flex-direction: column;
+
+   .advantage{
+      width: 90%;
+      margin: 1.5rem auto;
+
+      &__title{
+         margin-bottom: 1rem;
+         font-size: 2rem;
+         text-transform: uppercase;
+      }
+
+      &__description{
+         font-size: 1.8rem;
+         line-height: 1.35;
+      }
+   }
+
+}
+
+.experience{
+   &__title{
+      margin: 2rem 1rem 0 1rem;
+      font-size: 1.8rem;
+      text-align: left;
+      text-align-last: center;
+      text-transform: uppercase;
+   }
+
+   &__description{
+      margin: 1rem 2rem;
+      line-height: 1.35;
+      text-align: justify;
+   }
+
+   &__horizontal-line{
+      width: 90%;
+      margin: .5rem auto;
+      border: 2px solid $primary-red-color;
+      border-radius: 2px;
+   }
+
+   &-list{
+      margin: 0 1rem;
+   }
+}
+
+.footer{
+
 }
