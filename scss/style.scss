@@ -6,6 +6,7 @@ $second-font-family: 'Merriweather', serif;
 $primary-background-color: #303030;
 $secondary-background-color: #1d1d1d;;
 $primary-red-color: #d32f2f;
+$link-color: #107db5;
 $primary-lightgray-color: #cfcfcf;
 $primary-white-color: #ffffff;
 $primary-black-color: #000000;
@@ -452,7 +453,6 @@ html{
    &__title{
       margin: 2rem 1rem 0 1rem;
       font-size: 1.8rem;
-      text-align: left;
       text-align-last: center;
       text-transform: uppercase;
    }
@@ -476,5 +476,35 @@ html{
 }
 
 .footer{
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   background-color: $primary-lightgray-color;
 
+   &__subtitle{
+      padding: 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+   }
+
+   &-informations{
+      width: 90%;
+      margin: .5rem auto 1rem auto;
+      font-size: 1.6rem;
+      line-height: 1.5;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+
+      &__link{
+         color: $link-color;
+         transition: color .3s ease-out;
+
+         &:hover{
+            color: darken($color:$link-color, $amount: 25%)
+         }
+         // background-color: #052536;
+      }
+   }
 }
