@@ -156,15 +156,15 @@ html {
 .navigation__logo-text--big {
   font-size: 2.8rem;
   letter-spacing: 2px;
-  color: #ffffff;
   border-bottom: 3px solid #d32f2f;
   border-radius: .25rem;
+  color: #ffffff;
 }
 
 .navigation__logo-text--small {
-  letter-spacing: 1px;
-  font-size: 1.4rem;
   margin-top: .25rem;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
   color: #cccccc;
 }
 
@@ -242,13 +242,13 @@ html {
   transition: top 0.2s cubic-bezier(0.33333, 0.66667, 0.66667, 1) 0.2s, transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.13s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-.navigation .hamburger-active {
+.navigation .hamburger--active {
   -webkit-transition-delay: .22s;
           transition-delay: .22s;
   background-color: transparent;
 }
 
-.navigation .hamburger-active::after {
+.navigation .hamburger--active::after {
   width: 100%;
   top: 0;
   -webkit-transition: top 0.2s cubic-bezier(0.33333, 0, 0.66667, 0.33333), -webkit-transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
@@ -259,7 +259,7 @@ html {
           transform: translate3d(0, 10px, 0) rotate(-45deg);
 }
 
-.navigation .hamburger-active::before {
+.navigation .hamburger--active::before {
   width: 100%;
   top: 0;
   -webkit-transition: top 0.1s cubic-bezier(0.33333, 0, 0.66667, 0.33333) 0.15s, -webkit-transform 0.13s cubic-bezier(0.215, 0.61, 0.355, 1) 0.22s;
@@ -272,7 +272,6 @@ html {
 
 .navigation__menu {
   width: 100%;
-  padding: 0;
   position: fixed;
   top: 70px;
   left: 0;
@@ -295,27 +294,107 @@ html {
   transition: all .3s ease-out;
 }
 
-.navigation .main-menu-active {
+.navigation .main-menu--active {
   opacity: 1;
   -webkit-transform: scaleY(1);
           transform: scaleY(1);
 }
 
 .navigation .main-menu__item {
-  margin: 2rem 1rem;
+  margin: 1.5rem 1rem;
+  position: relative;
+}
+
+.navigation .main-menu__item:nth-child(2) {
+  margin-bottom: 0;
 }
 
 .navigation .main-menu__item .main-menu__link {
-  color: #ffffff;
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 700;
   text-transform: uppercase;
+  color: #ffffff;
   -webkit-transition: color .3s ease-out;
   transition: color .3s ease-out;
 }
 
 .navigation .main-menu__item .main-menu__link:hover {
   color: #bfbfbf;
+}
+
+.navigation .main-menu__item .main-menu__button {
+  padding: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+}
+
+.navigation .main-menu__item .main-menu__button:hover {
+  color: #bfbfbf;
+}
+
+.navigation .main-menu__item .main-menu__arrow {
+  border: solid #ffffff;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  position: absolute;
+  top: 3.7px;
+  right: 0px;
+  padding: 4px;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navigation .main-menu__item .main-menu__arrow:hover {
+  cursor: pointer;
+  border: solid #bfbfbf;
+  border-width: 0 4px 4px 0;
+}
+
+.navigation .main-menu__item .arrow--active {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.navigation .main-menu .services-menu {
+  width: 100%;
+  max-height: 0;
+  margin-left: 1rem;
+  overflow: hidden;
+  list-style-type: none;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.navigation .main-menu .services-menu--active {
+  max-height: 170px;
+  -webkit-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+}
+
+.navigation .main-menu .services-menu__item {
+  margin: 1rem 0;
+}
+
+.navigation .main-menu .services-menu__item .services-menu__link {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  -webkit-transition: color .3s ease-out;
+  transition: color .3s ease-out;
+}
+
+.navigation .main-menu .services-menu__item .services-menu__link:hover {
+  color: #bfbfbf;
+}
+
+.navigation .main-menu .services-menu__item:last-child {
+  margin-bottom: 0;
 }
 
 .header {
@@ -509,7 +588,7 @@ html {
 }
 
 .experience__horizontal-line {
-  width: 90%;
+  width: 75%;
   margin: .5rem auto;
   border: 2px solid #d32f2f;
   border-radius: 2px;
@@ -528,7 +607,7 @@ html {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  background-color: #cfcfcf;
+  background-color: #e9e9e9;
 }
 
 .footer__subtitle {
@@ -558,12 +637,12 @@ html {
 }
 
 .footer-informations__link {
-  color: #107db5;
+  color: #006ca4;
   -webkit-transition: color .3s ease-out;
   transition: color .3s ease-out;
 }
 
 .footer-informations__link:hover {
-  color: #062c40;
+  color: #00293e;
 }
 /*# sourceMappingURL=style.css.map */
