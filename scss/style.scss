@@ -82,14 +82,22 @@ html{
 
 .section-list{
    margin-left: 1rem;
-   font-size: 1.6rem;
    text-align: left;
    list-style-position: inside;
-   font-family: $second-font-family;
 
    &__item{
       margin: .5rem 0 1rem 1rem;
+
+      .section-list__link{
+         color: $link-color;
+         transition: all .3s ease-out;
+
+         &:hover{
+            color: darken($color: $link-color, $amount: 10%);
+         }
+      }
    }
+   
 }
 
 .bold-text{
@@ -320,7 +328,7 @@ html{
                cursor: pointer;
                border: solid darken($color: $primary-white-color, $amount: 25%);
                border-width: 0 4px 4px 0;
-            }
+            }  
          }
 
          .arrow--active{
@@ -349,7 +357,7 @@ html{
                font-size: 1.6rem;
                font-weight: 400;
                transition: color .3s ease-out;
-
+   
                &:hover{
                   color: darken($color: $primary-white-color, $amount: 25%);
                }
@@ -550,7 +558,7 @@ html{
    display: flex;
    flex-direction: column;
    text-align: center;
-   background-color: lighten($color: $primary-lightgray-color, $amount: 10%);
+   background-color: lighten($color: $primary-lightgray-color, $amount: 10%); 
 
    &__subtitle{
       padding: 1rem;
@@ -573,7 +581,7 @@ html{
          transition: color .3s ease-out;
 
          &:hover{
-            color: darken($color:$link-color, $amount: 20%)
+            color: darken($color:$link-color, $amount: 10%)
          }
          // background-color: #052536;
       }
