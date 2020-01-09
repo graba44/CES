@@ -46,6 +46,10 @@ html {
   background-color: #f2f2f2;
 }
 
+.content:last-child {
+  padding-bottom: 0;
+}
+
 .section-title {
   width: 200px;
   padding: 1rem;
@@ -70,14 +74,22 @@ html {
 
 .section-list {
   margin-left: 1rem;
-  font-size: 1.6rem;
   text-align: left;
   list-style-position: inside;
-  font-family: "Merriweather", serif;
 }
 
 .section-list__item {
   margin: .5rem 0 1rem 1rem;
+}
+
+.section-list__item .section-list__link {
+  color: #006ca4;
+  -webkit-transition: all .3s ease-out;
+  transition: all .3s ease-out;
+}
+
+.section-list__item .section-list__link:hover {
+  color: #004a71;
 }
 
 .bold-text {
@@ -120,7 +132,7 @@ html {
 }
 
 .between-section--shenzhen3 {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 .navigation {
@@ -643,6 +655,6 @@ html {
 }
 
 .footer-informations__link:hover {
-  color: #00293e;
+  color: #004a71;
 }
 /*# sourceMappingURL=style.css.map */

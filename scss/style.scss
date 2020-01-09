@@ -56,6 +56,10 @@ html{
    padding: 2rem 0;
    text-align: center;
    background-color: darken($color: $primary-white-color, $amount: 5%);
+
+   &:last-child{
+      padding-bottom: 0;
+   }
 }
 
 .section-title{
@@ -97,7 +101,7 @@ html{
          }
       }
    }
-   
+
 }
 
 .bold-text{
@@ -133,7 +137,7 @@ html{
    }
 
    &--shenzhen3{
-      background-color: black;
+      background-color: rgba(0, 0, 0, 0.6);
    }
 }
 
@@ -328,7 +332,7 @@ html{
                cursor: pointer;
                border: solid darken($color: $primary-white-color, $amount: 25%);
                border-width: 0 4px 4px 0;
-            }  
+            }
          }
 
          .arrow--active{
@@ -357,7 +361,7 @@ html{
                font-size: 1.6rem;
                font-weight: 400;
                transition: color .3s ease-out;
-   
+
                &:hover{
                   color: darken($color: $primary-white-color, $amount: 25%);
                }
@@ -558,7 +562,7 @@ html{
    display: flex;
    flex-direction: column;
    text-align: center;
-   background-color: lighten($color: $primary-lightgray-color, $amount: 10%); 
+   background-color: lighten($color: $primary-lightgray-color, $amount: 10%);
 
    &__subtitle{
       padding: 1rem;
