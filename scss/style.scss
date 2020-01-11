@@ -139,6 +139,12 @@ html{
    &--shenzhen3{
       background-color: rgba(0, 0, 0, 0.6);
    }
+
+   &--shenzhen4{
+      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+         url("../assets/test2.jpg") center no-repeat;
+      background-size: cover;
+   }
 }
 
 // Styles

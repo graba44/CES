@@ -135,6 +135,12 @@ html {
   background-color: rgba(0, 0, 0, 0.6);
 }
 
+.between-section--shenzhen4 {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/test2.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/test2.jpg") center no-repeat;
+  background-size: cover;
+}
+
 .navigation {
   width: 100%;
   height: 80px;
