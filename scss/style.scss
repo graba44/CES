@@ -385,7 +385,7 @@ html{
    min-height: calc(100vh - 80px);
    margin-top: 80px;
    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
-   url("../assets/test1.jpg") center no-repeat;
+   url("../assets/test1x.jpg") center no-repeat;
    background-size: cover;
    display: flex;
    align-items: center;
@@ -493,6 +493,14 @@ html{
          text-transform: uppercase;
       }
 
+      &__figure{
+
+         .service__image{
+            width: 100%;
+            min-height: 150px;;
+         }
+      }
+
       &__subtitle{
          font-size: 1.6rem;
          padding: 1rem;
@@ -539,6 +547,7 @@ html{
 }
 
 .experience{
+
    &__title{
       margin: 2rem 1rem 0 1rem;
       font-size: 1.8rem;
