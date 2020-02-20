@@ -110,7 +110,7 @@ html{
 
 .between-section{
    width: 100%;
-   min-height: 40vh;
+   min-height: 50vh;
    display: flex;
    justify-content: center;
    align-items: center;
@@ -385,7 +385,7 @@ html{
    min-height: calc(100vh - 80px);
    margin-top: 80px;
    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
-   url("../assets/test1x.jpg") center no-repeat;
+   url("../assets/test1.jpg") center no-repeat;
    background-size: cover;
    display: flex;
    align-items: center;
@@ -494,7 +494,6 @@ html{
       }
 
       &__figure{
-
          .service__image{
             width: 100%;
             min-height: 150px;;
@@ -547,7 +546,6 @@ html{
 }
 
 .experience{
-
    &__title{
       margin: 2rem 1rem 0 1rem;
       font-size: 1.8rem;
@@ -576,8 +574,14 @@ html{
 .footer{
    display: flex;
    flex-direction: column;
+   justify-content: center;
+   align-items: center;
    text-align: center;
-   background-color: lighten($color: $primary-lightgray-color, $amount: 10%);
+   background-color: lighten($color: $primary-lightgray-color, $amount: 7.5%);
+
+   &__title{
+      margin-top: 2rem;
+   }
 
    &__subtitle{
       padding: 1rem;
@@ -586,7 +590,7 @@ html{
    }
 
    &-informations{
-      width: 90%;
+      flex-basis: 90%s;
       margin: .5rem auto 1rem auto;
       font-size: 1.6rem;
       line-height: 1.5;
@@ -602,7 +606,117 @@ html{
          &:hover{
             color: darken($color:$link-color, $amount: 10%)
          }
-         // background-color: #052536;
       }
+   }
+}
+
+$first-breakpoint: 420px;
+$second-breakpoint: 768px;
+
+@media (min-width: $first-breakpoint){
+
+   .section-title{
+      width: 225px;
+   }
+
+   .services{
+      .service{
+         width: 80% !important;
+
+         &__figure{
+            width: 360px;
+            margin: 0 auto;
+         }
+
+         &__subtitle{
+            width: 360px;
+            margin: 0 auto 1rem auto;
+         }
+
+         &__description{
+            text-align: center;
+         }
+
+         &__title{
+            font-size: 2.2rem;
+         }
+      }
+   }
+
+   .between-section__header{
+      font-size: 2.2rem;
+   }
+
+   .experience__title{
+      font-size: 2rem;
+   }
+
+   .footer{
+      padding-bottom: 1rem;
+      flex-flow: row wrap;
+      align-items: baseline;
+
+      &__subtitle{
+         flex-basis: 100%;
+      }
+
+      &-informations{
+         align-items: center;
+         flex-basis: 45%;
+         margin: .5rem;
+      }
+   }
+}
+
+@media (min-width: $second-breakpoint){
+
+   .navigation__hamburger{
+      display: none;
+   }
+
+   .services{
+      .service{
+         &__figure{
+            width: 460px;
+            margin: 0 auto;
+         }
+
+         &__subtitle{
+            width: 460px;
+            margin: 0 auto 1rem auto;
+         }
+
+         &__title{
+            font-size: 2.4rem;
+      }
+   }
+
+   .section-title{
+      width: 250px;
+      font-size: 2.6rem;
+   }
+
+   .between-section{
+      min-height: 70vh;
+
+      &--shenzhen1, &--shenzhen2, &--shenzhen3, &--shenzhen4, &--shenzhen5{
+         background-attachment: fixed;
+      }
+
+      &__header{
+         font-size: 2.6rem;
+      }
+   }
+
+   .about-us__description, .about-us__button, .section-list__link, .informations__description, .service__description, .advantage__description{
+      font-size: 2rem !important;
+   }
+
+   .footer-informations{
+      font-size: 1.8rem;
+   }
+
+   .advantage__title{
+      font-size: 2.2rem !important;
    }
 }
