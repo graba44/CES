@@ -97,7 +97,7 @@ html{
          transition: all .3s ease-out;
 
          &:hover{
-            color: darken($color: $link-color, $amount: 10%);
+            color: darken($color: $link-color, $amount: 25%);
          }
       }
    }
@@ -125,24 +125,26 @@ html{
    }
 
    &--shenzhen1{
-      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+      background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
          url("../assets/shenzhen-city.jpg") center no-repeat;
       background-size: cover;
    }
 
    &--shenzhen2{
-      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+      background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)),
          url("../assets/shenzhen-boat.jpg") center no-repeat;
       background-size: cover;
    }
 
    &--shenzhen3{
-      background-color: rgba(0, 0, 0, 0.6);
+      background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+         url("../assets/shenzhen-city2.jpg") center no-repeat;
+      background-size: cover;
    }
 
    &--shenzhen4{
-      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
-         url("../assets/test2.jpg") center no-repeat;
+      background: linear-gradient(rgba(0, 0, 0, .35), rgba(0, 0, 0, .35)),
+         url("../assets/shenzhen-tower.jpg") center no-repeat;
       background-size: cover;
    }
 }
@@ -379,13 +381,17 @@ html{
          }
       }
    }
+
+   .second-menu{
+      display: none;
+   }
 }
 
 .header{
    min-height: calc(100vh - 80px);
    margin-top: 80px;
-   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
-   url("../assets/test1.jpg") center no-repeat;
+   background: linear-gradient(rgba(0, 0, 0, .0), rgba(0, 0, 0, .2)),
+         url("../assets/shenzhen-night.jpg") center no-repeat;
    background-size: cover;
    display: flex;
    align-items: center;
@@ -439,6 +445,17 @@ html{
          }
       }
    }
+
+   .circle{
+      position: absolute;
+   }
+   .header__circle{
+      background-color: darken($color: $primary-white-color, $amount: 5%);
+      width: 100px;
+      height: 100px;
+      border: 2px solid red;
+      border-radius: 50%;
+   }
 }
 
 .about-us{
@@ -467,7 +484,7 @@ html{
    }
 }
 
-.informations{
+.information{
    &__description{
       margin: 0 1rem;
       padding: .5rem;
@@ -561,7 +578,7 @@ html{
 
    &__horizontal-line{
       width: 75%;
-      margin: .5rem auto;
+      margin: .5rem auto 1rem auto;
       border: 2px solid $primary-red-color;
       border-radius: 2px;
    }
@@ -572,47 +589,44 @@ html{
 }
 
 .footer{
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
    background-color: lighten($color: $primary-lightgray-color, $amount: 7.5%);
+   padding: 1rem 0;
 
-   &__title{
-      margin-top: 2rem;
-   }
-
-   &__subtitle{
-      padding: 1rem;
-      font-size: 2rem;
-      text-transform: uppercase;
-   }
-
-   &-informations{
-      flex-basis: 90%s;
-      margin: .5rem auto 1rem auto;
-      font-size: 1.6rem;
-      line-height: 1.5;
+   .footer-container{
       display: flex;
-      flex-flow: column wrap;
+      flex-flow: column nowrap;
       justify-content: center;
-      align-items: center;
 
-      &__link{
-         color: $link-color;
-         transition: color .3s ease-out;
+      &__subtitle{
+         padding: 1rem;
+         font-size: 2rem;
+         text-align: center;
+         text-transform: uppercase;
+      }
 
-         &:hover{
-            color: darken($color:$link-color, $amount: 10%)
+      &__information{
+         margin: 1rem;
+         font-size: 1.6rem;
+         line-height: 1.5;
+         text-align: center;
+         display: flex;
+         flex-flow: column wrap;
+         justify-content: center;
+         align-items: center;
+
+         .footer-container__link{
+            color: $link-color;
+            transition: color .3s ease-out;
+
+            &:hover{
+               color: darken($color:$link-color, $amount: 25%)
+            }
          }
       }
    }
 }
 
-$first-breakpoint: 420px;
-$second-breakpoint: 768px;
-
+$first-breakpoint: 436px;
 @media (min-width: $first-breakpoint){
 
    .section-title{
@@ -652,26 +666,63 @@ $second-breakpoint: 768px;
    }
 
    .footer{
-      padding-bottom: 1rem;
-      flex-flow: row wrap;
-      align-items: baseline;
+      .footer-container{
+         flex-flow: row wrap;
+         align-items: baseline;
 
-      &__subtitle{
-         flex-basis: 100%;
-      }
+         &__subtitle{
+            flex-basis: 100%;
+         }
 
-      &-informations{
-         align-items: center;
-         flex-basis: 45%;
-         margin: .5rem;
+         &__information{
+            flex: 1;
+         }
       }
    }
 }
 
+$second-breakpoint: 768px;
 @media (min-width: $second-breakpoint){
 
-   .navigation__hamburger{
+   .navigation__hamburger, .main-menu{
       display: none;
+   }
+
+   .navigation__menu{
+      flex: 1;
+      position: static;
+
+      &--horizontal{
+         display: flex;
+         justify-content: space-evenly;
+         list-style-type: none;
+      }
+   }
+
+   .header__title{
+      &--big{
+         font-size: 3.4rem !important;
+      }
+
+      &--small{
+         font-size: 2.6rem !important;
+      }
+   }
+
+   .second-menu{
+      display: flex !important;
+
+      &__link{
+         font-size: 1.4rem;
+         font-weight: 700;
+         text-transform: uppercase;
+         color: $primary-white-color;
+         transition: color .3s ease-out;
+
+         &:hover{
+            color: darken($color: $primary-white-color, $amount: 25%);
+         }
+      }
    }
 
    .services{
@@ -688,6 +739,7 @@ $second-breakpoint: 768px;
 
          &__title{
             font-size: 2.4rem;
+         }
       }
    }
 
@@ -697,7 +749,7 @@ $second-breakpoint: 768px;
    }
 
    .between-section{
-      min-height: 70vh;
+      min-height: 60vh;
 
       &--shenzhen1, &--shenzhen2, &--shenzhen3, &--shenzhen4, &--shenzhen5{
          background-attachment: fixed;
@@ -708,15 +760,96 @@ $second-breakpoint: 768px;
       }
    }
 
-   .about-us__description, .about-us__button, .section-list__link, .informations__description, .service__description, .advantage__description{
+   .about-us__description, .about-us__button, .section-list__link, .information__description, .service__description, .advantage__description{
       font-size: 2rem !important;
    }
 
-   .footer-informations{
-      font-size: 1.8rem;
+   .experience__horizontal-line{
+      width: 65%;
    }
 
    .advantage__title{
       font-size: 2.2rem !important;
+   }
+
+   .footer{
+      display: flex;
+      flex-flow: row wrap;
+      align-items: baseline;
+      position: relative;
+
+      &__title{
+         position: absolute;
+         top: 0;
+         left: 0;
+      }
+
+      .footer-container{
+         margin-top: 80px;
+         flex: 1 0 50%;
+         flex-flow: row wrap;
+
+         &__information{
+            font-size: 1.7rem;
+         }
+      }
+   }
+}
+
+$third-breakpoint: 992px;
+@media (min-width: $third-breakpoint){
+
+   .between-section{
+      min-height: 70vh;
+
+      &__header{
+         font-size: 2.8rem;
+      }
+   }
+
+   .second-menu{
+      &__link{
+         font-size: 1.6rem;
+      }
+   }
+
+   .section-title{
+      width: 275px;
+      font-size: 2.8rem;
+   }
+
+   .service__title{
+      font-size: 2.6rem !important;
+   }
+
+   .about-us__description, .about-us__button, .section-list__link, .information__description, .service__description, .advantage__description, .experience__title{
+      font-size: 2.2rem !important;
+   }
+
+   .experience__horizontal-line{
+      width: 60%;
+   }
+
+   .experience{
+      &__title{
+         margin-top: 3rem;
+      }
+
+      &__description, .section-list__item{
+         text-align: center;
+         font-size: 2rem !important;
+      }
+   }
+
+   .advantage__title{
+      font-size: 2.4rem !important;
+   }
+
+   .footer{
+      .footer-container{
+         &__information{
+            font-size: 1.8rem;
+         }
+      }
    }
 }

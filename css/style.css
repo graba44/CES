@@ -89,7 +89,7 @@ html {
 }
 
 .section-list__item .section-list__link:hover {
-  color: #004a71;
+  color: #001825;
 }
 
 .bold-text {
@@ -120,24 +120,26 @@ html {
 }
 
 .between-section--shenzhen1 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/shenzhen-city.jpg") center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/shenzhen-city.jpg") center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("../assets/shenzhen-city.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../assets/shenzhen-city.jpg") center no-repeat;
   background-size: cover;
 }
 
 .between-section--shenzhen2 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/shenzhen-boat.jpg") center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/shenzhen-boat.jpg") center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.45)), to(rgba(0, 0, 0, 0.45))), url("../assets/shenzhen-boat.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url("../assets/shenzhen-boat.jpg") center no-repeat;
   background-size: cover;
 }
 
 .between-section--shenzhen3 {
-  background-color: rgba(0, 0, 0, 0.6);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.35)), to(rgba(0, 0, 0, 0.35))), url("../assets/shenzhen-city2.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../assets/shenzhen-city2.jpg") center no-repeat;
+  background-size: cover;
 }
 
 .between-section--shenzhen4 {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/test2.jpg") center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/test2.jpg") center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.35)), to(rgba(0, 0, 0, 0.35))), url("../assets/shenzhen-tower.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../assets/shenzhen-tower.jpg") center no-repeat;
   background-size: cover;
 }
 
@@ -415,11 +417,15 @@ html {
   margin-bottom: 0;
 }
 
+.navigation .second-menu {
+  display: none;
+}
+
 .header {
   min-height: calc(100vh - 80px);
   margin-top: 80px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/test1.jpg") center no-repeat;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/test1.jpg") center no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.2))), url("../assets/shenzhen-night.jpg") center no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.2)), url("../assets/shenzhen-night.jpg") center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -490,6 +496,18 @@ html {
           transform: translateY(0.5rem);
 }
 
+.header .circle {
+  position: absolute;
+}
+
+.header .header__circle {
+  background-color: #f2f2f2;
+  width: 100px;
+  height: 100px;
+  border: 2px solid red;
+  border-radius: 50%;
+}
+
 .about-us__description {
   margin: 0 1rem;
   padding: .5rem;
@@ -514,13 +532,13 @@ html {
   color: #ffffff;
 }
 
-.informations__description {
+.information__description {
   margin: 0 1rem;
   padding: .5rem;
   line-height: 1.75;
 }
 
-.informations__description--left-side {
+.information__description--left-side {
   text-align: left;
 }
 
@@ -612,7 +630,7 @@ html {
 
 .experience__horizontal-line {
   width: 75%;
-  margin: .5rem auto;
+  margin: .5rem auto 1rem auto;
   border: 2px solid #d32f2f;
   border-radius: 2px;
 }
@@ -622,39 +640,35 @@ html {
 }
 
 .footer {
+  background-color: #e2e2e2;
+  padding: 1rem 0;
+}
+
+.footer .footer-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  background-color: #e2e2e2;
 }
 
-.footer__title {
-  margin-top: 2rem;
-}
-
-.footer__subtitle {
+.footer .footer-container__subtitle {
   padding: 1rem;
   font-size: 2rem;
+  text-align: center;
   text-transform: uppercase;
 }
 
-.footer-informations {
-  -ms-flex-preferred-size: 90%s;
-      flex-basis: 90%s;
-  margin: .5rem auto 1rem auto;
+.footer .footer-container__information {
+  margin: 1rem;
   font-size: 1.6rem;
   line-height: 1.5;
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -670,17 +684,17 @@ html {
           align-items: center;
 }
 
-.footer-informations__link {
+.footer .footer-container__information .footer-container__link {
   color: #006ca4;
   -webkit-transition: color .3s ease-out;
   transition: color .3s ease-out;
 }
 
-.footer-informations__link:hover {
-  color: #004a71;
+.footer .footer-container__information .footer-container__link:hover {
+  color: #001825;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 436px) {
   .section-title {
     width: 225px;
   }
@@ -707,8 +721,7 @@ html {
   .experience__title {
     font-size: 2rem;
   }
-  .footer {
-    padding-bottom: 1rem;
+  .footer .footer-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-flow: row wrap;
@@ -717,23 +730,57 @@ html {
         -ms-flex-align: baseline;
             align-items: baseline;
   }
-  .footer__subtitle {
+  .footer .footer-container__subtitle {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
   }
-  .footer-informations {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -ms-flex-preferred-size: 45%;
-        flex-basis: 45%;
-    margin: .5rem;
+  .footer .footer-container__information {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
 @media (min-width: 768px) {
-  .navigation__hamburger {
+  .navigation__hamburger, .main-menu {
     display: none;
+  }
+  .navigation__menu {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: static;
+  }
+  .navigation__menu--horizontal {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    list-style-type: none;
+  }
+  .header__title--big {
+    font-size: 3.4rem !important;
+  }
+  .header__title--small {
+    font-size: 2.6rem !important;
+  }
+  .second-menu {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .second-menu__link {
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    -webkit-transition: color .3s ease-out;
+    transition: color .3s ease-out;
+  }
+  .second-menu__link:hover {
+    color: #bfbfbf;
   }
   .services .service__figure {
     width: 460px;
@@ -751,7 +798,7 @@ html {
     font-size: 2.6rem;
   }
   .between-section {
-    min-height: 70vh;
+    min-height: 60vh;
   }
   .between-section--shenzhen1, .between-section--shenzhen2, .between-section--shenzhen3, .between-section--shenzhen4, .between-section--shenzhen5 {
     background-attachment: fixed;
@@ -759,14 +806,83 @@ html {
   .between-section__header {
     font-size: 2.6rem;
   }
-  .about-us__description, .about-us__button, .section-list__link, .informations__description, .service__description, .advantage__description {
+  .about-us__description, .about-us__button, .section-list__link, .information__description, .service__description, .advantage__description {
     font-size: 2rem !important;
   }
-  .footer-informations {
-    font-size: 1.8rem;
+  .experience__horizontal-line {
+    width: 65%;
   }
   .advantage__title {
     font-size: 2.2rem !important;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    position: relative;
+  }
+  .footer__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .footer .footer-container {
+    margin-top: 80px;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 50%;
+            flex: 1 0 50%;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+  }
+  .footer .footer-container__information {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .between-section {
+    min-height: 70vh;
+  }
+  .between-section__header {
+    font-size: 2.8rem;
+  }
+  .second-menu__link {
+    font-size: 1.6rem;
+  }
+  .section-title {
+    width: 275px;
+    font-size: 2.8rem;
+  }
+  .service__title {
+    font-size: 2.6rem !important;
+  }
+  .about-us__description, .about-us__button, .section-list__link, .information__description, .service__description, .advantage__description, .experience__title {
+    font-size: 2.2rem !important;
+  }
+  .experience__horizontal-line {
+    width: 60%;
+  }
+  .experience__title {
+    margin-top: 3rem;
+  }
+  .experience__description, .experience .section-list__item {
+    text-align: center;
+    font-size: 2rem !important;
+  }
+  .advantage__title {
+    font-size: 2.4rem !important;
+  }
+  .footer .footer-container__information {
+    font-size: 1.8rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
