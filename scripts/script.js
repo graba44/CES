@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
    const servicesMenuLinks = servicesMenu.querySelectorAll(".services-menu__link");
 
-   for (let servicesMenuLink of servicesMenuLinks) {
+   for(let servicesMenuLink of servicesMenuLinks) {
       servicesMenuLink.addEventListener("click", () => {
          hamburgerSpan.classList.remove("hamburger--active");
          menu.classList.remove("main-menu--active")
