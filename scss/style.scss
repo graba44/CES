@@ -122,25 +122,25 @@ html{
    }
 
    &--shenzhen1{
-      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+      background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
          url("../assets/open-source.jpg");
       background-size: cover;
    }
 
    &--shenzhen2{
-      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+      background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
          url("../assets/supply-chain.jpg") no-repeat;
       background-size: cover;
    }
 
    &--shenzhen3{
-      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+      background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
          url("../assets/dashboard.jpg") center no-repeat;
       background-size: cover;
    }
 
    &--shenzhen4{
-      background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+      background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
          url("../assets/team.jpg") no-repeat;
       background-size: cover;
    }
@@ -391,7 +391,7 @@ html{
 .header{
    min-height: calc(100vh - 80px);
    margin-top: 80px;
-   background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)),
+   background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
          url("../assets/header-photo.jpg") no-repeat;
    background-size: cover;
    display: flex;
@@ -524,11 +524,11 @@ html{
 
    .information__icons{
       display: flex;
+      flex-flow: row wrap;
       justify-content: center;
       align-items: baseline;
 
       .information__icon-container{
-         flex: 1;
          margin: 1rem;
          font-size: 1.2rem;
          text-align: center;

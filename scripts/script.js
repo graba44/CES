@@ -53,6 +53,13 @@ document.addEventListener("DOMContentLoaded", () => {
       smoothScroll(navigationLogoLink.getAttribute("href"), 1000);
    })
 
+   const headerIconLinks = document.querySelectorAll(".header__icon-link");
+   for (let link of headerIconLinks) {
+      link.addEventListener("click", () => {
+         smoothScroll(link.getAttribute("href"), 1000);
+      })
+   }
+
    const headerLink = document.querySelector(".header__link");
    headerLink.addEventListener("click", () => {
       smoothScroll(headerLink.getAttribute("href"), 1000);
