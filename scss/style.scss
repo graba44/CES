@@ -565,6 +565,12 @@ html{
          text-transform: uppercase;
       }
 
+      &:last-child{
+         .service__title{
+            text-transform: inherit;
+         }
+      }
+
       &__figure{
          .service__image{
             width: 100%;
@@ -586,7 +592,7 @@ html{
          padding: .5rem;
          font-size: 1.8rem;
          line-height: 1.35;
-         text-align: justify;
+         text-align: left;
       }
 
       &-list{
@@ -1015,6 +1021,7 @@ $first-breakpoint: 436px;
       &__figure{
          .advantages__image{
             width: 90%;
+            max-width: 570px;
          }
       }
    }

@@ -659,6 +659,10 @@ html {
   text-transform: uppercase;
 }
 
+.services .service:last-child .service__title {
+  text-transform: inherit;
+}
+
 .services .service__figure .service__image {
   width: 100%;
   min-height: 150px;
@@ -678,7 +682,7 @@ html {
   padding: .5rem;
   font-size: 1.8rem;
   line-height: 1.35;
-  text-align: justify;
+  text-align: left;
 }
 
 .services .service-list {
@@ -1083,6 +1087,7 @@ html {
   }
   .advantages__figure .advantages__image {
     width: 90%;
+    max-width: 570px;
   }
   .services .service {
     width: 80%;
