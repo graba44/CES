@@ -1082,12 +1082,12 @@ html {
   .header__welcome .header__icons .header__icon-link .header__icon-container .header__icon {
     font-size: 4rem;
   }
+  .advantages__image {
+    width: 90% !important;
+    max-width: 535px;
+  }
   .section-title {
     width: 225px;
-  }
-  .advantages__figure .advantages__image {
-    width: 90%;
-    max-width: 570px;
   }
   .services .service {
     width: 80%;
@@ -1140,9 +1140,6 @@ html {
 @media (min-width: 768px) {
   .navigation__hamburger, .main-menu {
     display: none;
-  }
-  .advantages__image {
-    width: 85% !important;
   }
   .navigation__menu {
     -webkit-box-flex: 1;
@@ -1269,9 +1266,6 @@ html {
   .between-section__header {
     font-size: 2.8rem;
   }
-  .advantages__image {
-    width: 1000px !important;
-  }
   .second-menu__link {
     font-size: 1.6rem;
   }
@@ -1313,6 +1307,24 @@ html {
   }
   .footer .footer-container__information {
     font-size: 1.8rem;
+  }
+}
+
+@media (min-height: 800px) {
+  .advantages__image {
+    max-width: 810px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .advantages__image {
+    max-width: 1095px;
+  }
+}
+
+@media (min-height: 1000px) {
+  .advantages__image {
+    max-width: 1350px;
   }
 }
 /*# sourceMappingURL=style.css.map */

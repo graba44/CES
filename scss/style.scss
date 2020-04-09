@@ -1013,17 +1013,15 @@ $first-breakpoint: 436px;
       }
    }
 
-   .section-title{
-      width: 225px;
+   .advantages{
+      &__image{
+         width: 90% !important;
+         max-width: 535px;
+      }
    }
 
-   .advantages{
-      &__figure{
-         .advantages__image{
-            width: 90%;
-            max-width: 570px;
-         }
-      }
+   .section-title{
+      width: 225px;
    }
 
    .services{
@@ -1086,10 +1084,6 @@ $second-breakpoint: 768px;
 
    .navigation__hamburger, .main-menu{
       display: none;
-   }
-
-   .advantages__image{
-      width: 85% !important;
    }
 
    .navigation__menu{
@@ -1229,10 +1223,6 @@ $third-breakpoint: 992px;
       }
    }
 
-   .advantages__image{
-      width: 1000px !important;
-   }
-
    .second-menu{
       &__link{
          font-size: 1.6rem;
@@ -1293,6 +1283,33 @@ $third-breakpoint: 992px;
          &__information{
             font-size: 1.8rem;
          }
+      }
+   }
+}
+
+$height-breakpoint: 800px;
+@media (min-height: $height-breakpoint){
+   .advantages{
+      &__image{
+         max-width: 810px;
+      }
+   }
+}
+
+$height-second-breakpoint: 1000px;
+@media (min-height: $height-second-breakpoint){
+   .advantages{
+      &__image{
+         max-width: 1095px;
+      }
+   }
+}
+
+$height-third-breakpoint: 1200px;
+@media (min-height: $height-second-breakpoint){
+   .advantages{
+      &__image{
+         max-width: 1350px;
       }
    }
 }
